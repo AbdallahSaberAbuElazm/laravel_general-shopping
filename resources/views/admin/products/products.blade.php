@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.check')
 
 @section('card-header')
 Products <a href="{{route('new-product')}}" class="btn btn-primary"> Add Product</a>

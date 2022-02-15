@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.check')
 
 @section('card-header')
 {!! (is_null($product))? 'New Product' : 'Update Product : <span class="update-product-btn">'. $product->title.'</span>'
