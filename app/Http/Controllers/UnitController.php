@@ -12,8 +12,6 @@ use function PHPUnit\Framework\isNull;
 class UnitController extends Controller
 {
 
-
-
     public function showAdd()
     {
         $unit = Unit::find(1);

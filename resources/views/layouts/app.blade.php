@@ -84,30 +84,3 @@
 </body>
 
 </html>
-<!--
-        <main class="py-4">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-12">
-                        <div class="card">
-                            <div class="card-header">
-                                @yield('card-header')
-                            </div>
-                            <div class="card-body">
-                                @yield('card-body')
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </main>
-    </div>
-</body>
-@yield('scripts')
-@jquery
-@toastr_js
-@toastr_render
-</html> -->

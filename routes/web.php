@@ -23,6 +23,28 @@ Route::get('/',function(){
     return view('welcome');
 });
 
+// //units
+// Route::get('/units' , 'UnitController@index')->name('units');
+// Route::post('/units','UnitController@store');
+// Route::delete('/units','UnitController@delete');
+// Route::put('/units','UnitController@update');
+// Route::post('/search-units','UnitController@search')->name('search-units');
+
+// //tags
+// Route::get('/tags','TagController@index')->name('tags');
+// Route::post('/tags','TagController@store');
+// Route::put('/units','TagController@update');
+// Route::delete('/delete','TagController@delete');
+// Route::post('/search-tags','TagController@search')->name('search-tags');
+
+// //products
+// Route::get('/products','ProductController@index')->name('products');
+// Route::post('/products','ProductController@store');
+// Route::get('/new-product/{id?}','ProductController@newProduct')->name('new-product');
+// Route::put('/update-product','ProductController@update')->name('update-product');
+
+Route::middleware(['auth', 'user_is_admin'])->group(function () {
+
 //units
 Route::get('/units' , 'UnitController@index')->name('units');
 Route::post('/units','UnitController@store');
@@ -43,17 +65,6 @@ Route::post('/products','ProductController@store');
 Route::get('/new-product/{id?}','ProductController@newProduct')->name('new-product');
 Route::put('/update-product','ProductController@update')->name('update-product');
 
-Route::middleware(['auth', 'user_is_admin'])->group(function () {
-
-//   //units
-//   Route::get('/units' , 'UnitController@index')->name('units');
-//   Route::post('/units','UnitController@store');
-//   Route::delete('/units','UnitController@delete');
-//   Route::put('/units','UnitController@update');
-//   Route::post('/search-units','UnitController@search')->name('search-units');
-
-  //products
-//   Route::get('/products','ProductController@index')->name('products');
   //Categories
   Route::get('/categories','CategoryController@index')->name('categories');
   //tags
